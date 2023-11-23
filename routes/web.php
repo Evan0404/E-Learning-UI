@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\StudentClass;
+use App\Livewire\TeacherClass;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/student-class', StudentClass::class );
+Route::get('/teacher-class', TeacherClass::class );
 
 Auth::routes();
 

@@ -33,10 +33,10 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('temp') }}/assets/img/favicon/qr_code_scan.svg" />
-<!-- PWA  -->
-<meta name="theme-color" content="#6777ef"/>
-<link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
-<link rel="manifest" href="{{ asset('/manifest.json') }}">
+    <!-- PWA  -->
+    <meta name="theme-color" content="#6777ef"/>
+    <link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
+    <link rel="manifest" href="{{ asset('/manifest.json') }}">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -80,9 +80,10 @@
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link my-auto mx-auto">
               <span class="app-brand-logo demo">
-                <h2><i class="bi bi-qr-code-scan"></i></h2>
+                {{-- <h2><i class="bi bi-qr-code-scan"></i></h2> --}}
+                <img src="{{ asset('logo.png') }}" alt="" style="max-width: 40px;">
               </span>
-              <span class="app-brand-text demo menu-text fw-bolder ms-2 text-capitalize">AbsenQR</span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2 text-capitalize">E-Learning</span>
             </a>
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
               <i class="bx bx-chevron-left bx-sm align-middle"></i>
@@ -203,7 +204,6 @@
     <!-- build:js assets/vendor/js/core.js -->
     {{-- @livewireScriptConfig/ --}}
 
-    @livewireScripts
     <script src="{{ asset('/sw.js') }}"></script>
 <script>
     if ("serviceWorker" in navigator) {
@@ -221,6 +221,7 @@
         console.error("Service workers are not supported.");
     }
 </script>
+    @livewireScripts
     <script src="{{ asset('temp') }}/assets/vendor/libs/jquery/jquery.js"></script>
     <script src="{{ asset('temp') }}/assets/vendor/libs/popper/popper.js"></script>
     <script src="{{ asset('temp') }}/assets/vendor/js/bootstrap.js"></script>
